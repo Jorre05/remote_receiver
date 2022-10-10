@@ -41,7 +41,7 @@ CONFIG_SCHEMA = remote_base.validate_triggers(
                 CONF_IDLE, default="10ms"
             ): cv.positive_time_period_microseconds,
             cv.Optional(CONF_MEMORY_BLOCKS, default=3): cv.Range(min=1, max=8),
-            cv.Optional(CONF_RMT_CHANNEL, default=2): cv.Range(min=1, max=8),
+            cv.Optional(CONF_RMT_CHANNEL, default=2): cv.Range(min=0, max=7),
         }
     ).extend(cv.COMPONENT_SCHEMA)
 )

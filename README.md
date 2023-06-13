@@ -7,19 +7,17 @@ This is a quick hack to go around this issue. Until Esphome includes an option t
 
 The rmt_channel is 0 based. So to use the third channel, specify "rmt_channel: 2"
 
-<pre>
+```yaml
 external_components:
   - source: github://Jorre05/remote_receiver
     components: [ remote_receiver ]
-</pre>
 
-<pre>
 remote_receiver:
   pin:
     number: GPIO18
     inverted: true
   rmt_channel: 2
   dump: all
-</pre>
+```
 
 Ref: https://github.com/esphome/issues/issues/2934
